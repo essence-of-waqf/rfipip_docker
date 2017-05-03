@@ -28,7 +28,10 @@ RUN apt-get -y install \
     libqt4-xmlpatterns \
     libqt4pas-dev \
     libqt4pas5 \
-    python-tk
+    python-tk \
+    dvipng \
+    texlive-latex-extra \
+    texlive-fonts-recommended
 
 # update the system
 RUN apt-get -y install wget
@@ -43,10 +46,13 @@ RUN pip install pip -U && \
     pip install seaborn -U && \
     pip install mpld3 -U && \
     pip install jinja2 -U && \
+    pip install scikit-image -U && \
+    pip install statistics -U && \
     pip install rfipip
 
 # Downloading all source codes
-RUN wget https://raw.githubusercontent.com/pinsleepe/pulsar_docker/master/scripts/rfi_cwl.py -P /home
+RUN wget https://raw.githubusercontent.com/pinsleepe/rfi_cwl/devel/debug/rfi_cwl.py -P /home
+RUN wget https://raw.githubusercontent.com/pinsleepe/rfi_cwl/devel/debug/RFI_Spectrum_Database.csv -P /home
 WORKDIR /home
 RUN chmod 755 rfi_cwl.py
 
