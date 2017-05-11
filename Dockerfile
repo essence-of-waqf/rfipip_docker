@@ -31,7 +31,8 @@ RUN apt-get -y install \
     python-tk \
     dvipng \
     texlive-latex-extra \
-    texlive-fonts-recommended
+    texlive-fonts-recommended \
+    git
 
 # update the system
 RUN apt-get -y install wget
