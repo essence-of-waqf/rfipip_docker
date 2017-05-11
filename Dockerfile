@@ -48,7 +48,7 @@ RUN pip install pip -U && \
     pip install jinja2 -U && \
     pip install scikit-image -U && \
     pip install statistics -U && \
-    pip install rfipip
+    pip install git+https://github.com/pinsleepe/rfipip.git@devel
 
 # Downloading all source codes
 RUN wget https://raw.githubusercontent.com/pinsleepe/rfi_cwl/devel/debug/rfi_cwl.py -P /home
