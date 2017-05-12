@@ -38,17 +38,13 @@ RUN apt-get -y install \
 RUN apt-get -y install wget
 
 RUN pip install pip -U && \
-    pip install numpy -U && \
-    pip install scipy -U && \
-    pip install pandas -U && \
-    pip install h5py -U && \
-    pip install astropy -U && \
-    pip install matplotlib -U && \
-    pip install seaborn -U && \
-    pip install mpld3 -U && \
-    pip install jinja2 -U && \
-    pip install scikit-image -U && \
-    pip install statistics -U && \
+    pip install numpy==1.12.1  -U && \
+    pip install scipy==0.19.0 -U && \
+    pip install pandas==0.19.2 -U && \
+    pip install h5py==2.7.0 -U && \
+    pip install matplotlib==2.0.0 -U && \
+    pip install scikit-image==0.13.0 -U && \
+    pip install tables==3.4.2 -U && \
     pip install git+https://github.com/pinsleepe/rfipip.git@devel
 
 # Downloading all source codes
